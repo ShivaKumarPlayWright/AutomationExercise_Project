@@ -10,7 +10,7 @@ class AddressInformation{
          this.stateTextField=page.locator("#state")
          this.cityTextField=page.locator("#city")
          this.zipCodeTextField=page.locator("#zipcode")
-         this.mobileNumberTextField=page.locator("mobile_number")
+         this.mobileNumberTextField=page.locator("#mobile_number")
          this.createAccountButton=page.getByRole("button",{name:"Create Account"})
 
     }
