@@ -41,5 +41,6 @@ test("Register_User", async ({ page }) => {
         AddressInformationData.state, AddressInformationData.city, AddressInformationData.zipcode, AddressInformationData.mobileNumber)
    //14. Verify that 'ACCOUNT CREATED!' is visible
    await expect(page).toHaveText('Account Created!')
+   console.log("added");
    
 })
