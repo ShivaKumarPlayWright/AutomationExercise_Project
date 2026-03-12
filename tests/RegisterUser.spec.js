@@ -25,6 +25,8 @@ test("Register_User", async ({ page }) => {
     //6. Enter name and email address
     //7. Click 'Signup' button
     let emailID = testData.emailID + Date.now() + '@gmail.com'
+    console.log(emailID);
+    
     await newUser_SingUp.newUserLogin(testData.userName, emailID)
     //8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
     await expect(page).toHaveTitle("Automation Exercise - Signup")
@@ -39,7 +41,9 @@ test("Register_User", async ({ page }) => {
     await address.addressInformation(AddressInformationData.firstName, AddressInformationData.lastName,
         AddressInformationData.company, AddressInformationData.Address_1, AddressInformationData.Address_2, AddressInformationData.Country,
         AddressInformationData.state, AddressInformationData.city, AddressInformationData.zipcode, AddressInformationData.mobileNumber)
-    //14. Verify that 'ACCOUNT CREATED!' is visible
+    console.log(AddressInformationData.pa);
+    
+        //14. Verify that 'ACCOUNT CREATED!' is visible
     let createAccountStatus = await page.locator("//b[.='Account Created!']")
     await expect(createAccountStatus).toHaveText('Account Created!')
 
