@@ -23,5 +23,4 @@ test("Login user with incorrect email and password", async ({ page }) => {
    // 7. Click 'login' button
    // 8. Verify error 'Your email or password is incorrect!' is visible
    await expect(page.locator("//p[.='Your email or password is incorrect!']")).toHaveText("Your email or password is incorrect!")
-   await page.pause()
 })
