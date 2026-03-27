@@ -3,6 +3,7 @@ import testData from "../testdata/AETestData.json"
 import HomePage from "../pages/Home.page"
 import LoginToYourAccount from "../pages/loginToYourAccount.page"
 import loginWithEANDPData from "../testdata/LoginWithEmailAndPassWord.json"
+
 test("Login user with correct email and password", async ({ page }) => {
     let home_page = new HomePage(page)
     let login_page = new LoginToYourAccount(page)
